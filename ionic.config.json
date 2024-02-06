@@ -1,0 +1,8 @@
+{
+  "name": "food",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite",
+  "id": "8a7fa6b5"
+}
