@@ -12,12 +12,27 @@
         </ion-toolbar>
       </ion-header>
 
-      <ExploreContainer name="Tab 2 page" />
+      <div id="map" class="h-full"></div>
     </ion-content>
   </ion-page>
 </template>
 
 <script setup>
+import { onMounted } from 'vue';
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-import ExploreContainer from '@/components/ExploreContainer.vue';
+
+import "leaflet/dist/leaflet.css";
+
+import L from 'leaflet'
+
+onMounted(() =>{
+  var map = L.map('map').setView([51.505, -0.09], 13);
+  console.log(map)
+})
 </script>
+
+<style scoped>
+#map {
+  height: 100%
+}
+</style>
